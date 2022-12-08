@@ -22,6 +22,23 @@ function componentTestAsync() {
       const data = await response.json()
       setResult(data)
   };
+
+  useEffect(() => {
+    fetchRickAndMorty()
+    setTimeout(() => {
+      fetchRickAndMorty()
+    }, 3000)
+  }, [])
+
+  return (
+    <ErrorBoundary
+      fallBackComponent={<>Is not working</>}>
+        resetCondition={result}
+        error={error}
+    >
+      <div>{JSON.stringify(result)}</div>
+    </ErrorBoundary>
+  )
 }
 
 export default componentTestAsync;
