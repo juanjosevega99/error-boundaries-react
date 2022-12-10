@@ -1,13 +1,12 @@
 import './App.css'
 import { ComponentTest } from './components'
-import { ErrorBoundary } from './utilities'
+import ComponentTestAsync from "./components/ComonentTestAsync";
 
 function App() {
   return (
     <div className="App">
-      <ErrorBoundary fallBackComponent={<>Is not working</>}>
-        <ComponentTest name='Juan'/>
-      </ErrorBoundary >
+      <ComponentTestAsync />
+      <ComponentTest name='Juan' />
     </div>
   )
 }
