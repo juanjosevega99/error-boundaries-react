@@ -32,9 +32,9 @@ function componentTestAsync() {
 
   return (
     <ErrorBoundary
-      fallBackComponent={<>Is not working</>}>
-        resetCondition={result}
-        error={error}
+      fallBackComponent={<>Is not working</>}
+      resetCondition={result}
+      error={error}
     >
       <div>{JSON.stringify(result)}</div>
     </ErrorBoundary>
